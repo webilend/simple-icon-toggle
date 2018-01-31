@@ -1,27 +1,46 @@
-# Prova
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.4.
+# Simple Angular.io Icon Slide toggle
+An Angular.io compatible slide toggle with an icon inside ;)
 
-## Development server
+## Install
+`npm install simple-icon-toggle`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Furthermore you need to import Material icons (follow this guide http://google.github.io/material-design-icons/#icon-font-for-the-web, or use Angular Material);
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Usage
+1) Import it in your app.module.ts
+	```typescript
+	import { SimpleIconToggleModule } from 'simple-icon-toggle';
+	...
+	@NgModule({
+		imports: [
+		...,
+		SimpleIconToggleModule]
+	})
+	...
+	```
 
-## Build
+2) Use it in your app!
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+	```html
+	<simple-icon-toggle mat-icon="notifications_active" bar-color="'lightgreen'" spot-color="'rgb(255,0,0)'" [checked]="isToggleChecked" (toggle)="toggle($event)"></simple-icon-toggle>
+	```
 
-## Running unit tests
+## Component properties
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+**mat-icon**:
+	the icon to place in the slide toggle's spot (default: **notifications_active**).
 
-## Running end-to-end tests
+**bar-color**:
+	bar color when toggle is switched on, in css notation and quoted (e.g. **'rgba(255,0,0,0.8)'**, default: **'green'**).
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+**spot-color**:
+	switcher's spot color in css notation and quoted (e.g. **'green'**, default: **'red'**).
 
-## Further help
+**checked**:
+	slide toggle's status (default **false**).
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+**toggle**:
+	function to call when the user generates a toggle event. (e.g. **myWonderfulToggleFunction($event)**, where event is a boolean representing the switcher status after the toggle action).
+

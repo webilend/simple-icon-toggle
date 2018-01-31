@@ -1,0 +1,1 @@
+export * from './src/app/modules/simple-icon-toggle/simple-icon-toggle.module';

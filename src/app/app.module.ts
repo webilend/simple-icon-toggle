@@ -1,8 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
 import { AppComponent } from './app.component';
+import { SimpleIconToggleModule } from './modules/simple-icon-toggle/simple-icon-toggle.module';
 
 
 @NgModule({
@@ -10,7 +9,8 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    SimpleIconToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

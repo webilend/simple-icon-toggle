@@ -1,0 +1,10 @@
+<div class="switch_container">
+  <div class="switch" (click)="toggle()" [ngClass]="{'checked': isChecked}">
+    <div class="spot" [ngStyle]="{'background-color':switcherColor}">
+      <span>
+        <i class="material-icons vertically-centered">{{ icon }}</i>
+      </span>
+    </div>
+    <span class="slider" [ngStyle]="{'background-color': isChecked ? barColor: '#ccc' }"></span>
+  </div>
+</div>
