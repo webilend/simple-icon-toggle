@@ -1,7 +1,16 @@
 {
   "name": "simple-icon-toggle",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "license": "MIT",
+  "keywords": [
+    "angular5",
+    "angular.io",
+    "icon",
+    "toggle",
+    "switcher",
+    "material",
+    "angular-material"
+  ],
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
