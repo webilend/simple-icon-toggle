@@ -1,11 +1,11 @@
-
-# Simple Angular.io Icon Slide toggle
 An Angular.io compatible slide toggle with an icon inside ;)
+
+![Alt Text](https://media.giphy.com/media/xUOwG3hJGLwBSQQS8o/giphy.gif)
 
 ## Install
 `npm install simple-icon-toggle`
 
-Furthermore you need to import Material icons (follow this guide http://google.github.io/material-design-icons/#icon-font-for-the-web, or use Angular Material);
+Furthermore, you need to import Material icons (follow this guide http://google.github.io/material-design-icons/#icon-font-for-the-web, or use Angular Material);
 
 
 ## Usage
@@ -39,7 +39,7 @@ Furthermore you need to import Material icons (follow this guide http://google.g
 	switcher's spot color in css notation and quoted (e.g. **'green'**, default: **'red'**).
 
 **checked**:
-	slide toggle's status (default **false**).
+	slide toggle's status (default: **false**).
 
 **toggle**:
 	function to call when the user generates a toggle event. (e.g. **myWonderfulToggleFunction($event)**, where event is a boolean representing the switcher status after the toggle action).
