@@ -1,6 +1,6 @@
 {
   "name": "simple-icon-toggle",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "license": "MIT",
   "keywords": [
     "angular5",
@@ -10,14 +10,16 @@
     "switcher",
     "material",
     "angular-material"
-    ],
-    "repository" : { 
-            "type" : "git",
-            "url" : "https://github.com/webilend/simple-icon-toggle.git"
-    },
-    "bugs": { "url" : "https://github.com/webilend/simple-icon-toggle/issues" },
-    "scripts": {
-      "ng": "ng",
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/webilend/simple-icon-toggle.git"
+  },
+  "bugs": {
+    "url": "https://github.com/webilend/simple-icon-toggle/issues"
+  },
+  "scripts": {
+    "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod",
     "test": "ng test",
@@ -27,20 +29,17 @@
   },
   "private": false,
   "dependencies": {
-    "@angular/animations": "5.0.2",
     "@angular/common": "5.0.2",
     "@angular/compiler": "5.0.2",
     "@angular/core": "5.0.2",
-    "@angular/forms": "5.0.2",
-    "@angular/http": "5.0.2",
     "@angular/platform-browser": "5.0.2",
     "@angular/platform-browser-dynamic": "5.0.2",
-    "@angular/router": "5.0.2",
     "core-js": "^2.4.1",
     "rxjs": "^5.5.2",
     "zone.js": "^0.8.19"
   },
   "devDependencies": {
+    "@angular-devkit/core": "^0.2.0",
     "@angular/cli": "1.6.4",
     "@angular/compiler-cli": "5.0.2",
     "@angular/language-service": "5.0.2",
