@@ -1,7 +1,7 @@
 <div class="switch_container">
   <div class="switch" (click)="toggle()" [ngClass]="{'checked': isChecked}">
     <div class="spot" [ngStyle]="{'background-color':switcherColor}">
-      <span>
+      <span [ngStyle]="{'color': iconColor != null ? iconColor : 'inherit'}">
         <i class="material-icons vertically-centered">{{ icon }}</i>
       </span>
     </div>

@@ -11,8 +11,10 @@ export class SimpleIconToggleComponent {
   @Input('mat-icon') icon:string = 'notifications_active';
   @Input('bar-color') barColor:string = 'red';
   @Input('spot-color') switcherColor:string = null;
+  @Input('icon-color') iconColor:string = null;
   @Input('checked') isChecked:Boolean = false;
   @Output('toggle') toggleEvent = new EventEmitter();
+
 
   constructor() { }
 

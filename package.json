@@ -1,6 +1,6 @@
 {
   "name": "simple-icon-toggle",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "license": "MIT",
   "keywords": [
     "angular5",
@@ -10,9 +10,14 @@
     "switcher",
     "material",
     "angular-material"
-  ],
-  "scripts": {
-    "ng": "ng",
+    ],
+    "repository" : { 
+            "type" : "git",
+            "url" : "https://github.com/webilend/simple-icon-toggle.git"
+    },
+    "bugs": { "url" : "https://github.com/webilend/simple-icon-toggle/issues" },
+    "scripts": {
+      "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod",
     "test": "ng test",

@@ -24,7 +24,7 @@ Furthermore, you need to import Material icons (follow this guide http://google.
 2) Use it in your app!
 
 	```html
-	<simple-icon-toggle mat-icon="notifications_active" bar-color="'lightgreen'" spot-color="'rgb(255,0,0)'" [checked]="isToggleChecked" (toggle)="toggle($event)"></simple-icon-toggle>
+	<simple-icon-toggle mat-icon="notifications_active" icon-color="white" bar-color="lightgreen" spot-color="rgb(255,0,0)" [checked]="isToggleChecked" (toggle)="toggle($event)"></simple-icon-toggle>
 	```
 
 ## Component properties
@@ -33,10 +33,13 @@ Furthermore, you need to import Material icons (follow this guide http://google.
 	the icon to place in the slide toggle's spot (default: **notifications_active**).
 
 **bar-color**:
-	bar color when toggle is switched on, in css notation and quoted (e.g. **'rgba(255,0,0,0.8)'**, default: **'green'**).
+	bar color when toggle is switched on, in css notation (e.g. **rgba(255,0,0,0.8)**, default: **green**).
 
 **spot-color**:
-	switcher's spot color in css notation and quoted (e.g. **'green'**, default: **'red'**).
+	switcher's spot color in css notation (e.g. **green**, default: **red**).
+
+**icon-color**:
+	icon color in css notation (e.g. **rgba(255,255,255,.87)**, default: **inherit**).
 
 **checked**:
 	slide toggle's status (default: **false**).
