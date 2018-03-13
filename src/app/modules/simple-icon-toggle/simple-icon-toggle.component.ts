@@ -24,20 +24,16 @@ export class SimpleIconToggleComponent {
         }, values);
     };
 
-    @Input('checked')
-    get checked() {
-        return this.isCheckedValue;
-    }
-    set checked(val) {
-        this.isCheckedValue = val;
-        this.checkedChange.emit(this.isCheckedValue);
-    }
+    @Input('checked') checked = false;
     @Output() checkedChange = new EventEmitter();
 
 
     constructor() { }
 
-    toggle() { this.checked = !this.isCheckedValue; }
+    toggle() { 
+        this.checked = !this.checked;
+        this.checkedChange.emit(this.checked);
+    }
 
     // ES5 compatible merge...
     private mergeObjects(...args: any[]) {
