@@ -1,10 +1,11 @@
-<div class="switch_container">
-  <div class="switch" (click)="toggle()" [ngClass]="{'checked': isChecked}">
-    <div class="spot" [ngStyle]="{'background-color':switcherColor}">
-      <span [ngStyle]="{'color': iconColor != null ? iconColor : 'inherit'}">
-        <i class="material-icons vertically-centered">{{ icon }}</i>
+<div class="switch_container" [ngStyle]="{'width':options.width + 'px', 'height': ((42 * options.width)/100) + 'px'}">
+  <div class="switch" (click)="toggle()" [ngClass]="{'checked': checked}">
+    <div class="spot" [ngStyle]="{'background-color': options.spotColor}">
+      <span [ngStyle]="{'color': options.iconColor != null ? options.iconColor : 'inherit'}">
+        <i [ngStyle]="{'font-size': ((42 * options.width) / 100) + 'px',
+                      'line-height': ((58 * options.width) / 100) + 'px'}" class="material-icons">{{ icon }}</i>
       </span>
     </div>
-    <span class="slider" [ngStyle]="{'background-color': isChecked ? barColor: '#ccc' }"></span>
+    <span class="slider" [ngStyle]="{'background-color': checked ? options.barColor: '#ccc', 'border-radius': ((58 * options.width) / 100) + 'px' }"></span>
   </div>
 </div>

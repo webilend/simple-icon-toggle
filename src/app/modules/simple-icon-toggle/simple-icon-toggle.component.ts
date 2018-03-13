@@ -1,26 +1,54 @@
-import { Component,Input, Output, EventEmitter  } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { NgClass, NgStyle } from '@angular/common';
 
 @Component({
-  selector: 'simple-icon-toggle',
-  templateUrl: './simple-icon-toggle.component.html',
-  styleUrls: ['./simple-icon-toggle.component.css']
+    selector: 'simple-icon-toggle',
+    templateUrl: './simple-icon-toggle.component.html',
+    styleUrls: ['./simple-icon-toggle.component.css']
 })
 
 export class SimpleIconToggleComponent {
-  @Input('mat-icon') icon:string = 'notifications_active';
-  @Input('bar-color') barColor:string = 'red';
-  @Input('spot-color') switcherColor:string = null;
-  @Input('icon-color') iconColor:string = null;
-  @Input('checked') isChecked:Boolean = false;
-  @Output('toggle') toggleEvent = new EventEmitter();
+    private optionsValue: any;
+    private isCheckedValue = false;
+    @Input('mat-icon') icon: string = 'notifications_active';
+    @Input('options')
+    get options() {
+        return this.optionsValue;
+    }
+    set options(values) {
+        this.optionsValue = this.mergeObjects({
+            width: 60,
+            barColor: 'lightgreen',
+            spotColor: null,
+            iconColor: null
+        }, values);
+    };
+
+    @Input('checked')
+    get checked() {
+        return this.isCheckedValue;
+    }
+    set checked(val) {
+        this.isCheckedValue = val;
+        this.checkedChange.emit(this.isCheckedValue);
+    }
+    @Output() checkedChange = new EventEmitter();
 
 
-  constructor() { }
+    constructor() { }
 
-  toggle() {
-    this.isChecked = !this.isChecked;
-    this.toggleEvent.emit(this.isChecked);
-  }
+    toggle() { this.checked = !this.isCheckedValue; }
 
+    // ES5 compatible merge...
+    private mergeObjects(...args: any[]) {
+        var resObj = {};
+        for(var i=0; i < arguments.length; i += 1) {
+             var obj = arguments[i],
+                 keys = Object.keys(obj);
+             for(var j=0; j < keys.length; j += 1) {
+                 resObj[keys[j]] = obj[keys[j]];
+             }
+        }
+        return resObj;
+    }
 }

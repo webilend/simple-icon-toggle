@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  options = {
+    iconColor: "white"
+  };
+  _checked = true;
+
+  get checked() {
+    return this._checked;
+  }
+  set checked(newValue) {
+    console.log(newValue);
+  }
 }
