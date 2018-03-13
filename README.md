@@ -73,6 +73,4 @@ Furthermore, you need to import Material icons (follow this guide http://google.
 * **iconColor**: icon color in css notation (e.g. *rgba(255,255,255,.87)*, default: *inherit*).
 
 ## Known issues
-If a width less than 35px is chosen, the slider will not render properly (CSS problems).
-
-
+There are some CSS problems but I don't have much time to fix them now. If anyone want to help, please do a pull request on github.
