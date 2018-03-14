@@ -50,14 +50,14 @@ Furthermore, you need to import Material icons (follow this guide http://google.
 
 ## Component properties
 **mat-icon**:
-	the icon to place in the slide toggle's spot (default: **notifications_active**).
+	the icon to place in the slide toggle's spot (default: *notifications_active*).
 
 **checked**: variable representing toggle's status (default: *false*). It supports two-way data binding, so it will be automatically updated when there is a toggle event.
 	
 **options**: use this property to customize the aspect of the toggle (default values will be chosen if one or more options are not used).
 
 * **width**: slider width, in px (default: *60*).
-* **barColor**: bar color when toggle is switched on, in css notation (e.g. *rgba(255,0,0,0.8)*, default: *green*).
+* **barColor**: bar color when toggle is switched on, in css notation (e.g. *rgba(255,0,0,0.8)*, default: *lightgreen*).
 * **spotColor**: toggle's spot color in css notation (e.g. *green*, default: *red*).
 * **iconColor**: icon color in css notation (e.g. *rgba(255,255,255,.87)*, default: *inherit*).
 
