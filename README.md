@@ -28,24 +28,16 @@ Furthermore, you need to import Material icons (follow this guide http://google.
 
 2) Use it in your app!
 
-	*yourcomponent.component.html*
+	*yourComponent.component.html:*
 	```html
 	<simple-icon-toggle mat-icon="notifications_active" [(checked)]="isToggleChecked" [options]="toggleOptions"></simple-icon-toggle>
 	```
 
 
-	*yourcomponent.component.ts*
+	*yourComponent.component.ts:*
 	```typescript
 	...
-	  _toggleChecked = false;
-	  get isToggleChecked() {
-	    return this._toggleChecked;
-	  }
-
-	  // Make a setter if you need to do something in the exact moment when there is a toggle event.
-	  set isToggleChecked(newValue) {
-	    console.log("slider checked", newValue);
-	  }
+	isToggleChecked = false;
 	toggleOptions = {
 		barColor: "lightgreen",
 		spotColor: "rgb(255,0,0)",
@@ -60,17 +52,26 @@ Furthermore, you need to import Material icons (follow this guide http://google.
 **mat-icon**:
 	the icon to place in the slide toggle's spot (default: **notifications_active**).
 
-**checked**:
-	variable representing toggle's status (default: **false**).
-	It supports two-way data binding, so it will be automatically updated when there is a toggle event.
-	If you need to intercept the value in the exact moment when it changes, associate to it a setter (look at the example above).
-
-**options**: properties to customize the aspect of the slider (default values will chosen if one or more properties are not used).
+**checked**: variable representing toggle's status (default: *false*). It supports two-way data binding, so it will be automatically updated when there is a toggle event.
+	
+**options**: use this property to customize the aspect of the toggle (default values will be chosen if one or more options are not used).
 
 * **width**: slider width, in px (default: *60*).
 * **barColor**: bar color when toggle is switched on, in css notation (e.g. *rgba(255,0,0,0.8)*, default: *green*).
-* **spotColor**: switcher's spot color in css notation (e.g. *green*, default: *red*).
+* **spotColor**: toggle's spot color in css notation (e.g. *green*, default: *red*).
 * **iconColor**: icon color in css notation (e.g. *rgba(255,255,255,.87)*, default: *inherit*).
 
-## Known issues
-There are some CSS problems but I don't have much time to fix them now. If anyone want to help, please do a pull request on github.
+## Toggle
+If you need to intercept the value in the exact moment when it changes, associate a setter to *checked* property, like the following snippet of code.
+
+*yourComponent.component.ts:*
+```typescript
+private _toggleChecked = false;
+get isToggleChecked() {
+  return this._toggleChecked;
+}
+set isToggleChecked(newValue) {
+  this._toggleChecked = newValue;
+  console.log("slider checked", newValue);
+}
+```

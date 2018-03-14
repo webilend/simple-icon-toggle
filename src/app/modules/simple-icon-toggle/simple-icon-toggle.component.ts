@@ -17,7 +17,7 @@ export class SimpleIconToggleComponent {
     }
     set options(values) {
         this.optionsValue = this.mergeObjects({
-            width: 60,
+            width: 125,
             barColor: 'lightgreen',
             spotColor: null,
             iconColor: null
