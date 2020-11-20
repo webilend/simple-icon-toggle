@@ -1,6 +1,9 @@
 An Angular.io compatible slide toggle with an icon inside ;)
 
-![Alt Text](https://media.giphy.com/media/xUOwG3hJGLwBSQQS8o/giphy.gif)
+![Alt Text](https://media.giphy.com/media/jTKcVIXD3J9ul8PKGr/giphy.gif)
+
+**VERY IMPORTANT:**
+This component was created for Angular 5. It's not compatible with Angular 10+. Consider using Angular Material Slide Toggle instead (https://material.angular.io/components/slide-toggle/overview).
 
 **WARNING**:
 Component properties have been changed from the 0.1.8 version.
